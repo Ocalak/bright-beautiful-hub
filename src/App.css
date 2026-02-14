@@ -1,11 +1,8 @@
 #root {
-  --primary: 220, 90%, 56%;
-  --primary-foreground: 0, 0%, 100%;
-}
-
-.dark {
-  --primary: 220, 30%, 15%;  /* darker primary for dark mode */
-  --primary-foreground: 0, 0%, 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 
