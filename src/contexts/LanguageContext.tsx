@@ -4,7 +4,7 @@ type Lang = "en" | "de";
 
 const translations = {
   en: {
-    heroTitle: "Your Name",
+    heroTitle: "Öcal Kaptan",
     heroSubtitle: "Data Scientist | Data Analyst | AI/ML Engineer",
     heroDesc: "I build data-driven and AI-powered solutions to forecast trends, automate decisions, and extract insights from complex datasets.",
     github: "GitHub",
@@ -28,7 +28,7 @@ const translations = {
     contactEmail: "your@email.com",
   },
   de: {
-    heroTitle: "Dein Name",
+    heroTitle: "Öcal Kaptan",
     heroSubtitle: "Data Scientist | Datenanalyst | KI/ML-Ingenieur",
     heroDesc: "Ich entwickle datengetriebene und KI-gestützte Lösungen zur Vorhersage von Trends, Automatisierung von Entscheidungen und Gewinnung von Erkenntnissen aus komplexen Datensätzen.",
     github: "GitHub",
