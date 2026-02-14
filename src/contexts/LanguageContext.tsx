@@ -25,7 +25,7 @@ const translations = {
     skillData: "Data Analytics",
     skillTools: "Tools",
     contactTitle: "Get in Touch",
-    contactEmail: "your@email.com",
+    contactEmail: "email@ocalkaptan.de",
   },
   de: {
     heroTitle: "Öcal Kaptan",
@@ -49,7 +49,7 @@ const translations = {
     skillData: "Datenanalyse",
     skillTools: "Werkzeuge",
     contactTitle: "Kontakt",
-    contactEmail: "your@email.com",
+    contactEmail: "email@ocalkaptan.de",
   },
 };
 
