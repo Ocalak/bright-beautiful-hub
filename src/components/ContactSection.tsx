@@ -11,7 +11,7 @@ const ContactSection = () => {
           {t("contactTitle")}
         </h2>
         <a
-          href={`mailto:${t("contactEmail")}`}
+          href={`mailto:${t("email@ocalkaptan.de")}`}
           className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-6"
         >
           <Mail className="w-4 h-4" />
@@ -19,7 +19,7 @@ const ContactSection = () => {
         </a>
         <div className="flex justify-center gap-4 mt-4">
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/Ocalak/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
@@ -27,7 +27,7 @@ const ContactSection = () => {
             <Github className="w-5 h-5" />
           </a>
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/ocalkaptan123/"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
