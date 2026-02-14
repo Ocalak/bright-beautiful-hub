@@ -15,7 +15,7 @@ const ContactSection = () => {
           className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors mb-6"
         >
           <Mail className="w-4 h-4" />
-          {t("email@ocalkaptan.de")}
+          {t("contactEmail")}
         </a>
         <div className="flex justify-center gap-4 mt-4">
           <a
