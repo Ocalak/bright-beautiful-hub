@@ -55,10 +55,11 @@ const HeroSection = () => {
               <Linkedin className="w-4 h-4" />
               {t("linkedin")}
             </a>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/90 font-medium hover:bg-primary-foreground/10 transition-colors"
-            >
+            <a 
+              href="/cv.pdf" 
+              download="YourName-CV.pdf"
+              className="flex items-center gap-2"
+              >
               <FileDown className="w-4 h-4" />
               {t("downloadCV")}
             </a>
