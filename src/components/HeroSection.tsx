@@ -1,6 +1,7 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Github, Linkedin, FileDown } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -13,6 +14,15 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
+          <div className="mb-8 flex justify-center">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg">
+              <img
+                src={profilePhoto}
+                alt="Öcal Kaptan"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary-foreground/80 text-sm font-medium backdrop-blur-sm">
             Data & AI
           </div>
@@ -28,7 +38,7 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap justify-center gap-3">
             <a
-              href="https://github.com/yourgithub"
+              href="https://github.com/Ocalak"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg accent-gradient text-primary-foreground font-semibold shadow-lg hover:opacity-90 transition-opacity"
@@ -37,7 +47,7 @@ const HeroSection = () => {
               {t("github")}
             </a>
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/ocalkaptan123/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/90 font-medium hover:bg-primary-foreground/10 transition-colors"
