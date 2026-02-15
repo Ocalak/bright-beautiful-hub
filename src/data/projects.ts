@@ -20,7 +20,7 @@ export const projects: ProjectDetail[] = [
     slug: "rental-platform",
     titleKey: "proj2Title",
     descKey: "proj2Desc",
-    tech: "FastAPI, React, PostgreSQL, AWS",
+    tech: "Python, FastAPI, PostgreSQL, AWS, ETL",
     githubLink: "https://github.com/Ocalak/Rental-House-Portal-FastAPI-React-Postgres-AWS-",
     detailsKey: "proj2Details",
   },
@@ -29,7 +29,7 @@ export const projects: ProjectDetail[] = [
     titleKey: "proj3Title",
     descKey: "proj3Desc",
     tech: "Python, SQL, Dashboarding",
-    githubLink: "https://github.com/Ocalak/kion-group-dashboard",
+    githubLink: "https://ocalak.github.io/kion-group-dashboard/",
     detailsKey: "proj3Details",
   },
   {
