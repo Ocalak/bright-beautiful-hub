@@ -1,33 +1,8 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
-
-const projects = [
-  {
-    titleKey: "proj1Title" as const,
-    descKey: "proj1Desc" as const,
-    tech: "Python, Neural Networks, SHAP",
-    link: "https://github.com/Ocalak/FeedForward-Neural-Network",
-  },
-  {
-    titleKey: "proj2Title" as const,
-    descKey: "proj2Desc" as const,
-    tech: "FastAPI, React, PostgreSQL, AWS",
-    link: "https://github.com/Ocalak/Rental-House-Portal-FastAPI-React-Postgres-AWS-",
-  },
-  {
-    titleKey: "proj3Title" as const,
-    descKey: "proj3Desc" as const,
-    tech: "Python, SQL, Dashboarding",
-    link: "https://github.com/Ocalak/kion-group-dashboard",
-  },
-  {
-    titleKey: "proj4Title" as const,
-    descKey: "proj4Desc" as const,
-    tech: "Python, Time Series",
-    link: "https://github.com/Ocalak/Forecasting-Bitcoin",
-  },
-];
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { projects } from "@/data/projects";
 
 const ProjectsSection = () => {
   const { t } = useLanguage();
@@ -47,12 +22,9 @@ const ProjectsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <motion.a
-              key={project.titleKey}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover border border-border/50 transition-all duration-300 hover:-translate-y-1"
+            <motion.div
+              key={project.slug}
+              className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover border border-border/50 transition-all duration-300 hover:-translate-y-1"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -60,17 +32,34 @@ const ProjectsSection = () => {
             >
               <div className="flex items-start justify-between mb-3">
                 <h3 className="text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors pr-4">
-                  {t(project.titleKey)}
+                  {t(project.titleKey as any)}
                 </h3>
-                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0 mt-1" />
               </div>
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                {t(project.descKey)}
+                {t(project.descKey as any)}
               </p>
-              <p className="text-xs font-mono font-medium text-primary/80 bg-accent/50 inline-block px-3 py-1 rounded-full">
+              <p className="text-xs font-mono font-medium text-primary/80 bg-accent/50 inline-block px-3 py-1 rounded-full mb-4">
                 {project.tech}
               </p>
-            </motion.a>
+              <div className="flex items-center gap-4 pt-2 border-t border-border/50">
+                <Link
+                  to={`/project/${project.slug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                >
+                  {t("viewDetails")}
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  GitHub
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
