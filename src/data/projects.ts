@@ -175,54 +175,6 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
-    slug: "bitcoin-forecasting",
-    titleKey: "proj4Title",
-    descKey: "proj4Desc",
-    tech: "Python, R, Time Series",
-    githubLink: "https://github.com/Ocalak/Forecasting-Bitcoin",
-    metrics: [
-      { value: "3", label: { en: "Models Compared", de: "Verglichene Modelle" }, badge: "ARIMA, GARCH, LSTM" },
-      { value: "85%", label: { en: "Directional Accuracy", de: "Richtungsgenauigkeit" } },
-      { value: "2+", label: { en: "Years of Data", de: "Jahre an Daten" } },
-      { value: "5+", label: { en: "Feature Categories", de: "Feature-Kategorien" } },
-    ],
-    modelComparison: [
-      { name: "LSTM", metrics: [{ label: "MAE", value: "Low" }, { label: "Dir. Acc.", value: "85%" }], isHighlighted: true },
-      { name: "ARIMA", metrics: [{ label: "MAE", value: "Medium" }, { label: "Dir. Acc.", value: "72%" }] },
-      { name: "GARCH", metrics: [{ label: "MAE", value: "High" }, { label: "Dir. Acc.", value: "68%" }] },
-    ],
-    technicalHighlights: {
-      en: [
-        "Evaluated multiple time-series forecasting models for Bitcoin price prediction",
-        "Implemented ARIMA, GARCH, and LSTM neural network models in Python and R",
-        "Performed comprehensive backtesting across different market conditions",
-        "Analyzed model performance using MAE, RMSE, and directional accuracy metrics",
-        "Explored feature engineering with trading volume, sentiment data, and technical indicators",
-        "Published findings comparing model strengths in volatile vs. stable market periods",
-      ],
-      de: [
-        "Evaluierung mehrerer Zeitreihen-Prognosemodelle für die Bitcoin-Preisprognose",
-        "Implementierung von ARIMA-, GARCH- und LSTM-Modellen in Python und R",
-        "Umfassendes Backtesting unter verschiedenen Marktbedingungen",
-        "Analyse der Modellleistung mit MAE, RMSE und Richtungsgenauigkeit",
-        "Feature-Engineering mit Handelsvolumen, Sentimentdaten und technischen Indikatoren",
-        "Veröffentlichung von Vergleichsergebnissen in volatilen vs. stabilen Marktphasen",
-      ],
-    },
-    businessImpact: {
-      en: [
-        "Provides insights into cryptocurrency market dynamics",
-        "Identifies optimal model selection based on market volatility conditions",
-        "Supports risk-aware trading strategy development",
-      ],
-      de: [
-        "Liefert Einblicke in die Dynamik des Kryptowährungsmarktes",
-        "Identifiziert optimale Modellwahl basierend auf Marktvolatilität",
-        "Unterstützt die Entwicklung risikobasierter Handelsstrategien",
-      ],
-    },
-  },
-  {
     slug: "econometrics-with-r",
     titleKey: "proj5Title",
     descKey: "proj5Desc",
