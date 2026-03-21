@@ -190,49 +190,6 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
-    slug: "financial-dashboard",
-    titleKey: "proj3Title",
-    descKey: "proj3Desc",
-    tech: "Python, SQL, Dashboarding",
-    githubLink: "https://ocalak.github.io/kion-group-dashboard/",
-    metrics: [
-      { value: "6+", label: { en: "KPI Categories", de: "KPI-Kategorien" } },
-      { value: "4", label: { en: "Data Sources", de: "Datenquellen" } },
-      { value: "Auto", label: { en: "Report Generation", de: "Berichtserstellung" }, badge: "Quarterly" },
-      { value: "Drill-down", label: { en: "Interactive Analysis", de: "Interaktive Analyse" } },
-    ],
-    technicalHighlights: {
-      en: [
-        "Created an interactive dashboard for Kion Group's financial KPI analysis",
-        "Built data pipelines to extract and transform financial data from multiple sources",
-        "Implemented dynamic visualizations including revenue trends, profit margins, and cost breakdowns",
-        "Used SQL for data aggregation and Python for advanced analytics",
-        "Designed executive-level summary views and detailed drill-down capabilities",
-        "Automated report generation for quarterly financial reviews",
-      ],
-      de: [
-        "Erstellung eines interaktiven Dashboards für die Finanzkennzahlen-Analyse der Kion Group",
-        "Aufbau von Datenpipelines zur Extraktion und Transformation von Finanzdaten",
-        "Implementierung dynamischer Visualisierungen inkl. Umsatztrends und Kostenaufschlüsselungen",
-        "Verwendung von SQL für Datenaggregation und Python für erweiterte Analysen",
-        "Gestaltung von Management-Übersichten und detaillierten Drill-Down-Ansichten",
-        "Automatisierung der Berichtserstellung für vierteljährliche Finanzreviews",
-      ],
-    },
-    businessImpact: {
-      en: [
-        "Streamlines quarterly financial reporting for executives",
-        "Enables rapid identification of cost anomalies and revenue trends",
-        "Reduces manual reporting effort through automation",
-      ],
-      de: [
-        "Vereinfacht vierteljährliche Finanzberichte für die Geschäftsleitung",
-        "Ermöglicht schnelle Erkennung von Kostenanomalien und Umsatztrends",
-        "Reduziert manuellen Berichtsaufwand durch Automatisierung",
-      ],
-    },
-  },
-  {
     slug: "econometrics-with-r",
     titleKey: "proj5Title",
     descKey: "proj5Desc",
