@@ -21,6 +21,7 @@ export interface ProjectDetail {
   descKey: string;
   tech: string;
   githubLink: string;
+  mediaUrl?: string;
   metrics: ProjectMetric[];
   modelComparison?: ModelComparison[];
   featureImportance?: FeatureImportance[];
@@ -29,6 +30,63 @@ export interface ProjectDetail {
 }
 
 export const projects: ProjectDetail[] = [
+  {
+    slug: "gridops-energy-forecasting",
+    titleKey: "energyTitle",
+    descKey: "energyDesc",
+    tech: "Python, FastAPI, PostgreSQL, XGBoost, Random Forest, SCADA",
+    githubLink: "https://github.com/Ocalak/de-load-forecast",
+    mediaUrl: "/dashboard-recording.webp",
+    metrics: [
+      { value: "2.19%", label: { en: "MAPE", de: "MAPE" }, badge: "High Accuracy" },
+      { value: "94.2%", label: { en: "R² Score", de: "R²-Wert" } },
+      { value: "Automated", label: { en: "Data Pipeline", de: "Datenpipeline" }, badge: "Hourly" },
+      { value: "1.8 GW", label: { en: "RMSE", de: "RMSE" } },
+      { value: "SHAP", label: { en: "Explainability", de: "Erklärbarkeit" } },
+      { value: "FastAPI", label: { en: "Backend", de: "Backend" } },
+    ],
+    modelComparison: [
+      { name: "Random Forest", metrics: [{ label: "RMSE", value: "2116 MW" }, { label: "MAPE", value: "2.81%" }], isHighlighted: true },
+      { name: "XGBoost", metrics: [{ label: "RMSE", value: "2218 MW" }, { label: "MAPE", value: "2.92%" }] },
+      { name: "Linear SGD", metrics: [{ label: "RMSE", value: "2530 MW" }, { label: "MAPE", value: "3.54%" }] },
+    ],
+    featureImportance: [
+      { name: { en: "Hour of Day", de: "Tageszeit" }, percentage: 35 },
+      { name: { en: "Temperature", de: "Temperatur" }, percentage: 28 },
+      { name: { en: "Day of Week", de: "Wochentag" }, percentage: 15 },
+      { name: { en: "Lag Features", de: "Lag-Features" }, percentage: 22 },
+    ],
+    technicalHighlights: {
+      en: [
+        "Built an end-to-end machine learning pipeline for short-term electrical load forecasting.",
+        "Evaluated multiple models (Linear SGD, RandomForest, XGBoost) and implemented automatic dynamic model selection.",
+        "Created a dark-themed FastAPI dashboard complete with real-time SHAP feature importance.",
+        "Integrated a Generative AI feature that writes human-readable operator briefings diagnosing anomalies.",
+        "Automated hourly telemetry tracking and daily 24-hour predictions using APScheduler and PostgreSQL.",
+        "Implemented anomaly detection with dynamic thresholds based on MAPE.",
+      ],
+      de: [
+        "Aufbau einer End-to-End-Machine-Learning-Pipeline für die kurzfristige Vorhersage der elektrischen Last.",
+        "Bewertung mehrerer Modelle (Linear SGD, RandomForest, XGBoost) und Implementierung einer automatischen dynamischen Modellauswahl.",
+        "Erstellung eines FastAPI-Dashboards im Dark-Mode mit Echtzeit-SHAP-Feature-Importance.",
+        "Integration einer Generative-AI-Funktion, die lesbare Operator-Briefings zur Diagnose von Anomalien verfasst.",
+        "Automatisierte stündliche Telemetrieverfolgung und tägliche 24-Stunden-Vorhersagen mittels APScheduler und PostgreSQL.",
+        "Implementierung von Anomalieerkennung mit dynamischen Schwellenwerten basierend auf MAPE.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Empowers grid operators with real-time predictive insights.",
+        "Generates automated briefings to reduce human cognitive load during anomalies.",
+        "Improves overall grid stability via continuous model health tracking.",
+      ],
+      de: [
+        "Befähigt Netzbetreiber mit vorausschauenden Echtzeit-Erkenntnissen.",
+        "Erzeugt automatisierte Briefings, um die kognitive Belastung des Menschen bei Anomalien zu reduzieren.",
+        "Verbessert die allgemeine Netzstabilität durch kontinuierliche Überwachung der Modellgesundheit.",
+      ],
+    },
+  },
   {
     slug: "load-forecasting",
     titleKey: "proj1Title",

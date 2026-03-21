@@ -61,6 +61,17 @@ const ProjectDetail = () => {
               </div>
             </div>
 
+            {/* Media Recording */}
+            {project.mediaUrl && (
+              <div className="my-8 rounded-2xl overflow-hidden border border-border/50 shadow-2xl">
+                <img 
+                  src={project.mediaUrl} 
+                  alt={t(project.titleKey as any)} 
+                  className="w-full h-auto object-cover" 
+                />
+              </div>
+            )}
+
             {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mt-4">
               {project.tech.split(", ").map((tech) => (
