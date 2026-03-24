@@ -25,6 +25,12 @@ const Footer = () => {
             >
               {t("datenschutz" as any)}
             </Link>
+            <button
+              onClick={() => (window as any).klaro.show()}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              {t("cookieSettings" as any)}
+            </button>
           </div>
         </div>
       </div>
