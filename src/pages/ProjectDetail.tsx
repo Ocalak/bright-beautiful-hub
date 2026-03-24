@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Github, TrendingUp, BarChart3, Cpu, Target, Lightbulb, CheckCircle2 } from "lucide-react";
 import { projects } from "@/data/projects";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const ProjectDetail = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,9 +30,9 @@ const ProjectDetail = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <div className="max-w-4xl mx-auto px-6 pt-28 pb-20">
+      <div className="max-w-4xl mx-auto px-6 pt-28 pb-20 flex-grow">
         <Link
           to="/"
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -248,6 +249,7 @@ const ProjectDetail = () => {
           </a>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };
