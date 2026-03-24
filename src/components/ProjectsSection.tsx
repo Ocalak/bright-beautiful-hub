@@ -55,7 +55,7 @@ const ProjectsSection = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  GitHub
+                  {project.githubLink.includes("github.com") ? "GitHub" : t("visitWebsite").replace(" →", "")}
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </div>

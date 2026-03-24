@@ -227,15 +227,24 @@ const ProjectDetail = () => {
             </ul>
           </div>
 
-          {/* GitHub Link */}
+          {/* GitHub/Website Link */}
           <a
             href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg accent-gradient text-primary-foreground font-semibold shadow-lg hover:opacity-90 transition-opacity"
           >
-            <Github className="w-4 h-4" />
-            {t("viewOnGithub")}
+            {project.githubLink.includes("github.com") ? (
+              <>
+                <Github className="w-4 h-4" />
+                {t("viewOnGithub")}
+              </>
+            ) : (
+              <>
+                <TrendingUp className="w-4 h-4" />
+                {t("visitWebsite")}
+              </>
+            )}
           </a>
         </motion.div>
       </div>

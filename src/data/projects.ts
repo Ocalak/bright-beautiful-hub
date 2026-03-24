@@ -88,6 +88,48 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
+    slug: "lernenwirdeutsch",
+    titleKey: "germanTitle",
+    descKey: "germanDesc",
+    tech: "React, CSS, Web Analytics, Content Management",
+    githubLink: "https://lernenwirdeutsch.com",
+    mediaUrl: "/lernenwirdeutsch.png",
+    metrics: [
+      { value: "A1-C1", label: { en: "Level Coverage", de: "Niveaustufen" }, badge: "Comprehensive" },
+      { value: "Interactive", label: { en: "Exercise Type", de: "Übungstyp" }, badge: "Modern" },
+      { value: "Progress", label: { en: "User Analytics", de: "Benutzeranalyse" } },
+      { value: "Work-Focus", label: { en: "Specialization", de: "Spezialisierung" } },
+    ],
+    technicalHighlights: {
+      en: [
+        "Developed a responsive landing page and interactive learning platform using React.",
+        "Implemented situational learning modules specifically for professional German contexts.",
+        "Integrated progress tracking mechanisms to enhance user engagement and retention.",
+        "Optimized asset loading and performance for a smooth educational experience.",
+        "Designed a clean, dark-themed UI focused on readability and task completion.",
+      ],
+      de: [
+        "Entwicklung einer responsiven Landingpage und interaktiven Lernplattform mit React.",
+        "Implementierung von situationsbezogenen Lernmodulen speziell für den beruflichen Kontext.",
+        "Integration von Mechanismen zur Fortschrittskontrolle zur Steigerung der Nutzerbindung.",
+        "Optimierung der Ladezeiten und Performance für eine reibungslose Lernerfahrung.",
+        "Gestaltung einer modernen Benutzeroberfläche im Dark-Mode mit Fokus auf Lesbarkeit.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Provides a scalable platform for thousands of German learners worldwide.",
+        "Reduces friction in starting the learning journey via 'Practical-First' methodology.",
+        "Enables data-driven improvements to curriculum based on user progress patterns.",
+      ],
+      de: [
+        "Bietet eine skalierbare Plattform für Tausende von Deutschlernern weltweit.",
+        "Reduziert Hürden beim Lernstart durch die 'Practical-First'-Methodik.",
+        "Ermöglicht datengestützte Lehrplanverbesserungen basierend auf Nutzerfortschritten.",
+      ],
+    },
+  },
+  {
     slug: "load-forecasting",
     titleKey: "proj1Title",
     descKey: "proj1Desc",
