@@ -236,7 +236,7 @@ export const projects: ProjectDetail[] = [
     titleKey: "agentTitle",
     descKey: "agentDesc",
     tech: "Python, FastAPI, Claude AI, MoviePy, Edge TTS, Cloudinary, Meta Graph API, YouTube Data API, Docker",
-    githubLink: "https://github.com/Ocalak/lernenweirdeutsch-agent",
+    githubLink: "https://github.com/Ocalak/lernenwirdeutsch-agent-public",
     metrics: [
       { value: "Full Auto", label: { en: "Pipeline", de: "Pipeline" }, badge: "End-to-End" },
       { value: "Claude AI", label: { en: "Content Engine", de: "Content-Engine" }, badge: "claude-opus-4-6" },
