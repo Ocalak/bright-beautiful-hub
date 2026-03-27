@@ -232,6 +232,51 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
+    slug: "lernenweirdeutsch-agent",
+    titleKey: "agentTitle",
+    descKey: "agentDesc",
+    tech: "Python, FastAPI, Claude AI, MoviePy, Edge TTS, Cloudinary, Meta Graph API, YouTube Data API, Docker",
+    githubLink: "https://github.com/Ocalak/lernenweirdeutsch-agent",
+    metrics: [
+      { value: "Full Auto", label: { en: "Pipeline", de: "Pipeline" }, badge: "End-to-End" },
+      { value: "Claude AI", label: { en: "Content Engine", de: "Content-Engine" }, badge: "claude-opus-4-6" },
+      { value: "9:16 HD", label: { en: "Video Format", de: "Videoformat" }, badge: "1080×1920" },
+      { value: "2 Platforms", label: { en: "Distribution", de: "Distribution" }, badge: "Instagram + YouTube" },
+      { value: "Daily", label: { en: "Scheduling", de: "Zeitplanung" }, badge: "Automated" },
+      { value: "60s", label: { en: "Video Length", de: "Videolänge" }, badge: "Short-form" },
+    ],
+    technicalHighlights: {
+      en: [
+        "Built a webhook-driven FastAPI agent that triggers a full content-to-publish pipeline from a single blog post.",
+        "Integrated Claude claude-opus-4-6 with extended thinking to generate platform-optimized Instagram captions and YouTube Short scripts.",
+        "Created a custom video generator using MoviePy and Pillow that renders branded 1080×1920 frames with TTS narration via Edge TTS.",
+        "Automated video upload to Cloudinary (required for Instagram Reels API) and multi-platform posting via Meta Graph API and YouTube Data API v3.",
+        "Solved FastAPI asyncio event loop conflicts for TTS generation inside an async web server.",
+        "Scheduled daily execution via macOS launchd with round-robin blog post rotation and run-state tracking.",
+      ],
+      de: [
+        "Entwicklung eines webhook-gesteuerten FastAPI-Agenten, der aus einem einzigen Blog-Post eine vollständige Content-to-Publish-Pipeline auslöst.",
+        "Integration von Claude claude-opus-4-6 mit erweitertem Denken zur Generierung plattformoptimierter Instagram-Captions und YouTube-Short-Skripte.",
+        "Erstellung eines benutzerdefinierten Video-Generators mit MoviePy und Pillow, der gebrandete 1080×1920-Frames mit TTS-Narration via Edge TTS rendert.",
+        "Automatisierter Video-Upload zu Cloudinary und Multi-Plattform-Veröffentlichung via Meta Graph API und YouTube Data API v3.",
+        "Lösung von FastAPI-asyncio-Event-Loop-Konflikten für TTS-Generierung in einem asynchronen Webserver.",
+        "Tägliche Ausführung via macOS launchd mit rotierender Blog-Post-Auswahl und Statusverfolgung.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Eliminates 2–3 hours of manual social media work per post through full end-to-end automation.",
+        "Enables consistent daily publishing across Instagram Reels and YouTube Shorts without human intervention.",
+        "Scales content distribution for a language learning brand with zero per-post effort.",
+      ],
+      de: [
+        "Eliminiert 2–3 Stunden manuelle Social-Media-Arbeit pro Beitrag durch vollständige Automatisierung.",
+        "Ermöglicht konsistente tägliche Veröffentlichungen auf Instagram Reels und YouTube Shorts ohne menschliches Eingreifen.",
+        "Skaliert die Content-Distribution für eine Sprachlernmarke ohne Aufwand pro Beitrag.",
+      ],
+    },
+  },
+  {
     slug: "econometrics-with-r",
     titleKey: "proj5Title",
     descKey: "proj5Desc",
