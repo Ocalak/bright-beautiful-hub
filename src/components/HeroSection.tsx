@@ -55,14 +55,6 @@ const HeroSection = () => {
               <Linkedin className="w-4 h-4" />
               {t("linkedin")}
             </a>
-            <a 
-              href="/cv.pdf" 
-              download="YourName-CV.pdf"
-              className="flex items-center gap-2"
-              >
-              <FileDown className="w-4 h-4" />
-              {t("downloadCV")}
-            </a>
           </div>
         </motion.div>
       </div>
