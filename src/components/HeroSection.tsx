@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
-import LiquidEther from "@/components/LiquidEther";
+import Waves from "@/components/Waves";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -12,15 +12,17 @@ const HeroSection = () => {
       {/* Liquid Ether Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 hero-gradient" />
-        <LiquidEther
-          colors={['#00f900', '#00c7fc', '#00fdff']}
-          resolution={0.5}
-          autoDemo={true}
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          mouseForce={20}
-          cursorSize={100}
-          style={{ position: 'absolute', inset: 0 }}
+        <Waves
+          lineColor="rgba(0, 199, 252, 0.3)"
+          waveSpeedX={0.02}
+          waveSpeedY={0.01}
+          waveAmpX={40}
+          waveAmpY={20}
+          xGap={12}
+          yGap={36}
+          friction={0.925}
+          tension={0.005}
+          maxCursorMove={120}
         />
       </div>
 
