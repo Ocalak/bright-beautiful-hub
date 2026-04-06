@@ -1,14 +1,31 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { Github, Linkedin, FileDown } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
+import LiquidEther from "@/components/LiquidEther";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="hero-gradient min-h-[70vh] flex items-center justify-center pt-16">
-      <div className="max-w-4xl mx-auto px-6 py-20 text-center">
+    <section className="relative min-h-[70vh] flex items-center justify-center pt-16 overflow-hidden">
+      {/* Liquid Ether Background */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 hero-gradient" />
+        <LiquidEther
+          colors={['#00f900', '#00c7fc', '#00fdff']}
+          resolution={0.5}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          mouseForce={20}
+          cursorSize={100}
+          style={{ position: 'absolute', inset: 0 }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
