@@ -8,9 +8,9 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
 
   const menuItems = [
-    { label: t("projects") || "Projects", link: "#projects" },
-    { label: t("skills") || "Skills", link: "#skills" },
-    { label: t("contact") || "Contact", link: "#contact" },
+    { label: t("projectsTitle"), link: "#projects" },
+    { label: t("skillsTitle"), link: "#skills" },
+    { label: t("contactTitle"), link: "#contact" },
   ];
 
   const socialItems = [
