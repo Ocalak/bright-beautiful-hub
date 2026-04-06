@@ -8,7 +8,7 @@ const ProjectsSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 bg-background">
+    <section id="projects" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground"

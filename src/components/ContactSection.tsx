@@ -5,7 +5,7 @@ const ContactSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="hero-gradient py-16">
+    <section id="contact" className="hero-gradient py-16">
       <div className="max-w-3xl mx-auto text-center px-6">
         <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
           {t("contactTitle")}
