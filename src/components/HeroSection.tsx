@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
-import LiquidEther from "@/components/LiquidEther";
+import Waves from "@/components/Waves";
 
 const HeroSection = () => {
   const { t } = useLanguage();
