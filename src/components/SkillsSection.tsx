@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { Brain, BarChart3, Wrench } from "lucide-react";
+import { Brain, BarChart3, Wrench, Zap } from "lucide-react";
 
 const SkillsSection = () => {
   const { t } = useLanguage();
@@ -18,7 +18,7 @@ const SkillsSection = () => {
     },
     {
       titleKey: "skillAutomation" as const,
-      icon: Wrench,
+      icon: Zap,
       skills: ["Claude AI", "n8n", "Airtable", "Napier AI"],
     },
     {
@@ -40,7 +40,7 @@ const SkillsSection = () => {
           {t("skillsTitle")}
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-4 gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.titleKey}
