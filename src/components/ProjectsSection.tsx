@@ -34,6 +34,12 @@ const ProjectsSection = () => {
                 <h3 className="text-lg font-semibold text-card-foreground group-hover:text-primary transition-colors pr-4">
                   {t(project.titleKey as any)}
                 </h3>
+                {project.ongoing && (
+                  <span className="flex items-center gap-1.5 shrink-0 text-xs font-medium text-emerald-500 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    {t("ongoing")}
+                  </span>
+                )}
               </div>
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                 {t(project.descKey as any)}

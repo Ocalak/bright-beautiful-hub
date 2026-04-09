@@ -22,6 +22,7 @@ export interface ProjectDetail {
   tech: string;
   githubLink: string;
   mediaUrl?: string;
+  ongoing?: boolean;
   metrics: ProjectMetric[];
   modelComparison?: ModelComparison[];
   featureImportance?: FeatureImportance[];
@@ -225,6 +226,7 @@ export const featuredProjects: ProjectDetail[] = [
     descKey: "triviumDesc",
     tech: "Claude AI, Airtable, Zapier, JavaScript, Schema.org, SEO",
     githubLink: "https://trivium-pi.vercel.app",
+    ongoing: true,
     metrics: [
       { value: "Claude AI", label: { en: "Content Engine", de: "Content-Engine" }, badge: "LLM-Powered" },
       { value: "Airtable", label: { en: "Data Backbone", de: "Datenbasis" }, badge: "Automated" },
@@ -327,6 +329,7 @@ export const sideProjects: ProjectDetail[] = [
     descKey: "firstkebabDesc",
     tech: "JavaScript, Stripe API, Webhooks, Email Automation",
     githubLink: "https://firstkebab.vercel.app",
+    ongoing: true,
     metrics: [
       { value: "Real-Time", label: { en: "Payment Notifications", de: "Zahlungsbenachrichtigungen" }, badge: "Automated" },
       { value: "Stripe", label: { en: "Payment Gateway", de: "Zahlungsanbieter" }, badge: "Integrated" },
