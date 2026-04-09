@@ -281,7 +281,7 @@ export const projects: ProjectDetail[] = [
     titleKey: "firstkebabTitle",
     descKey: "firstkebabDesc",
     tech: "JavaScript, Stripe API, Webhooks, Email Automation",
-    githubLink: "https://github.com/Ocalak",
+    githubLink: "https://firstkebab.vercel.app",
     metrics: [
       { value: "Real-Time", label: { en: "Payment Notifications", de: "Zahlungsbenachrichtigungen" }, badge: "Automated" },
       { value: "Stripe", label: { en: "Payment Gateway", de: "Zahlungsanbieter" }, badge: "Integrated" },
@@ -322,7 +322,7 @@ export const projects: ProjectDetail[] = [
     titleKey: "triviumTitle",
     descKey: "triviumDesc",
     tech: "Claude AI, Airtable, Zapier, JavaScript, Schema.org, SEO",
-    githubLink: "https://trivium.nrw",
+    githubLink: "https://trivium-pi.vercel.app",
     metrics: [
       { value: "Claude AI", label: { en: "Content Engine", de: "Content-Engine" }, badge: "LLM-Powered" },
       { value: "Airtable", label: { en: "Data Backbone", de: "Datenbasis" }, badge: "Automated" },
