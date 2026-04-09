@@ -277,6 +277,89 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
+    slug: "firstkebab-stripe",
+    titleKey: "firstkebabTitle",
+    descKey: "firstkebabDesc",
+    tech: "JavaScript, Stripe API, Webhooks, Email Automation",
+    githubLink: "https://github.com/Ocalak",
+    metrics: [
+      { value: "Real-Time", label: { en: "Payment Notifications", de: "Zahlungsbenachrichtigungen" }, badge: "Automated" },
+      { value: "Stripe", label: { en: "Payment Gateway", de: "Zahlungsanbieter" }, badge: "Integrated" },
+      { value: "Webhook", label: { en: "Event Handling", de: "Event-Handling" }, badge: "Live" },
+      { value: "0 Manual", label: { en: "Steps After Payment", de: "Manuelle Schritte" }, badge: "Full Auto" },
+    ],
+    technicalHighlights: {
+      en: [
+        "Integrated Stripe payment gateway into a restaurant website using vanilla JavaScript — full checkout flow and payment confirmation UX.",
+        "Built a Stripe webhook handler to automate email notifications on payment events (success, failure, refund).",
+        "Configured Stripe webhook signature verification to ensure secure, authenticated event processing.",
+        "Implemented end-to-end flow: customer pays → Stripe fires webhook → server processes event → confirmation email sent automatically.",
+        "Deployed with zero manual monitoring required — all payment events handled and logged automatically.",
+      ],
+      de: [
+        "Integration des Stripe-Zahlungs-Gateways in eine Restaurant-Website mit Vanilla JavaScript — vollständiger Checkout-Flow und Zahlungsbestätigungs-UX.",
+        "Aufbau eines Stripe-Webhook-Handlers zur automatischen E-Mail-Benachrichtigung bei Zahlungsereignissen (Erfolg, Fehler, Rückerstattung).",
+        "Konfiguration der Stripe-Webhook-Signaturverifizierung für eine sichere, authentifizierte Ereignisverarbeitung.",
+        "Implementierung des End-to-End-Flows: Kunde zahlt → Stripe feuert Webhook → Server verarbeitet Ereignis → Bestätigungs-E-Mail wird automatisch gesendet.",
+        "Deployment ohne manuelles Monitoring — alle Zahlungsereignisse werden automatisch verarbeitet und protokolliert.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Eliminates manual payment tracking — owner is notified instantly on every transaction.",
+        "Reduces failed payment response time from hours to seconds via automated alerts.",
+        "Provides a scalable payment infrastructure ready for future online ordering features.",
+      ],
+      de: [
+        "Eliminiert manuelle Zahlungsverfolgung — Inhaber wird bei jeder Transaktion sofort benachrichtigt.",
+        "Reduziert die Reaktionszeit bei fehlgeschlagenen Zahlungen von Stunden auf Sekunden durch automatische Benachrichtigungen.",
+        "Bietet eine skalierbare Zahlungsinfrastruktur, bereit für zukünftige Online-Bestellfunktionen.",
+      ],
+    },
+  },
+  {
+    slug: "trivium-seo-automation",
+    titleKey: "triviumTitle",
+    descKey: "triviumDesc",
+    tech: "Claude AI, Airtable, Zapier, JavaScript, Schema.org, SEO",
+    githubLink: "https://trivium.nrw",
+    metrics: [
+      { value: "Claude AI", label: { en: "Content Engine", de: "Content-Engine" }, badge: "LLM-Powered" },
+      { value: "Airtable", label: { en: "Data Backbone", de: "Datenbasis" }, badge: "Automated" },
+      { value: "Bilingual", label: { en: "Site Coverage", de: "Website-Abdeckung" }, badge: "DE + EN" },
+      { value: "Hreflang", label: { en: "i18n Fix", de: "i18n-Fix" }, badge: "Implemented" },
+      { value: "Schema.org", label: { en: "Structured Data", de: "Strukturierte Daten" }, badge: "Upgraded" },
+    ],
+    technicalHighlights: {
+      en: [
+        "Built an AI-powered SEO content workflow using Airtable as a structured data backbone and Claude AI (via Claude Code) to generate and refine content — replacing manual Zapier processes with LLM-driven automation.",
+        "Implemented hreflang tags on a bilingual (DE/EN) website to fix international indexation issues that were preventing Google from correctly indexing both language versions.",
+        "Upgraded bare School schema to full LocalBusiness + EducationalOrganization structured data, enabling rich results eligibility.",
+        "Conducted a full technical SEO audit identifying critical gaps: missing Google Business Profile, no individual course pages, zero blog content, and incomplete schema markup.",
+        "Delivered a 12-month SEO growth strategy and content architecture targeting high-intent local queries (Integrationskurs Duisburg, Sprachschule Duisburg).",
+      ],
+      de: [
+        "Aufbau eines KI-gestützten SEO-Content-Workflows mit Airtable als strukturierter Datenbasis und Claude AI zur Content-Generierung — Ablösung manueller Zapier-Prozesse durch LLM-gesteuerte Automatisierung.",
+        "Implementierung von Hreflang-Tags auf einer zweisprachigen (DE/EN) Website zur Behebung internationaler Indexierungsprobleme.",
+        "Upgrade des Schema-Markups von einfachem School-Schema zu vollständigem LocalBusiness + EducationalOrganization für Rich-Results-Berechtigung.",
+        "Durchführung eines vollständigen technischen SEO-Audits mit Identifikation kritischer Lücken: fehlendes Google Business Profile, keine einzelnen Kursseiten, kein Blog-Content.",
+        "Erstellung einer 12-monatigen SEO-Wachstumsstrategie und Content-Architektur für hochintentionale lokale Suchanfragen (Integrationskurs Duisburg, Sprachschule Duisburg).",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Automated SEO content workflows cut manual content production time by 70% using Claude AI + Airtable pipelines.",
+        "Hreflang and schema fixes unblocked both language versions for Google indexation — directly improving organic discoverability.",
+        "Local SEO strategy positions the school to capture the high-intent 'Integrationskurs Duisburg' search market in the Duisburg immigrant community.",
+      ],
+      de: [
+        "Automatisierte SEO-Content-Workflows reduzieren den manuellen Content-Aufwand um 70% durch Claude AI + Airtable-Pipelines.",
+        "Hreflang- und Schema-Fixes haben beide Sprachversionen für die Google-Indexierung freigeschaltet.",
+        "Lokale SEO-Strategie positioniert die Schule für den hochintentionalen Suchmarkt 'Integrationskurs Duisburg'.",
+      ],
+    },
+  },
+  {
     slug: "econometrics-with-r",
     titleKey: "proj5Title",
     descKey: "proj5Desc",
