@@ -19,7 +19,7 @@ const SkillsSection = () => {
     {
       titleKey: "skillAutomation" as const,
       icon: Zap,
-      skills: ["Claude AI", "n8n", "Airtable", "Napier AI"],
+      skills: ["Claude AI", "n8n", "Airtable", "Zapier"],
     },
     {
       titleKey: "skillTools" as const,
