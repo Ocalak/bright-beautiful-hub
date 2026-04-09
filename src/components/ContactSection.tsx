@@ -22,17 +22,19 @@ const ContactSection = () => {
             href="https://github.com/Ocalak/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+            aria-label="GitHub profile"
+            className="p-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors duration-200 cursor-pointer"
           >
-            <Github className="w-5 h-5" />
+            <Github className="w-5 h-5" aria-hidden="true" />
           </a>
           <a
             href="https://www.linkedin.com/in/ocalkaptan123/"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
+            aria-label="LinkedIn profile"
+            className="p-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-colors duration-200 cursor-pointer"
           >
-            <Linkedin className="w-5 h-5" />
+            <Linkedin className="w-5 h-5" aria-hidden="true" />
           </a>
         </div>
       </div>

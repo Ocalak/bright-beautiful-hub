@@ -40,27 +40,32 @@ const SkillsSection = () => {
           {t("skillsTitle")}
         </motion.h2>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {categories.map((cat, i) => (
             <motion.div
               key={cat.titleKey}
-              className="bg-card rounded-xl p-6 shadow-card border border-border/50 text-center"
+              className="bg-card rounded-xl p-5 shadow-card border border-border/50"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-accent mb-4">
-                <cat.icon className="w-6 h-6 text-accent-foreground" />
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-accent shrink-0">
+                  <cat.icon className="w-4 h-4 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <h3 className="font-semibold text-card-foreground text-sm leading-tight">{t(cat.titleKey)}</h3>
               </div>
-              <h3 className="font-semibold text-card-foreground mb-4">{t(cat.titleKey)}</h3>
-              <ul className="space-y-2">
+              <div className="flex flex-wrap gap-1.5">
                 {cat.skills.map((skill) => (
-                  <li key={skill} className="text-sm text-muted-foreground">
+                  <span
+                    key={skill}
+                    className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-md font-mono"
+                  >
                     {skill}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           ))}
         </div>

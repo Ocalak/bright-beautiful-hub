@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Download } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpeg";
 import Waves from "@/components/Waves";
 
@@ -31,15 +31,22 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/30 shadow-lg">
-              <img
-                src={profilePhoto}
-                alt="Öcal Kaptan"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative w-32 h-32 md:w-40 md:h-40">
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-primary/40 shadow-lg">
+                <img
+                  src={profilePhoto}
+                  alt="Öcal Kaptan — Data Scientist"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Online/available indicator */}
+              <span className="absolute bottom-1 right-1 md:bottom-2 md:right-2 flex items-center gap-1.5 bg-background/90 backdrop-blur-sm border border-emerald-500/30 text-emerald-400 text-xs font-medium px-2 py-0.5 rounded-full shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Open to Work
+              </span>
             </div>
           </div>
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary-foreground/80 text-sm font-medium backdrop-blur-sm">
@@ -60,19 +67,30 @@ const HeroSection = () => {
               href="https://github.com/Ocalak"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg accent-gradient text-primary-foreground font-semibold shadow-lg hover:opacity-90 transition-opacity"
+              aria-label="View GitHub profile"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg accent-gradient text-primary-foreground font-semibold shadow-lg hover:opacity-90 transition-opacity duration-200 cursor-pointer"
             >
-              <Github className="w-4 h-4" />
+              <Github className="w-4 h-4" aria-hidden="true" />
               {t("github")}
             </a>
             <a
               href="https://www.linkedin.com/in/ocalkaptan123/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/90 font-medium hover:bg-primary-foreground/10 transition-colors"
+              aria-label="View LinkedIn profile"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/90 font-medium hover:bg-primary-foreground/10 transition-colors duration-200 cursor-pointer"
             >
-              <Linkedin className="w-4 h-4" />
+              <Linkedin className="w-4 h-4" aria-hidden="true" />
               {t("linkedin")}
+            </a>
+            <a
+              href="/cv.pdf"
+              download
+              aria-label="Download CV as PDF"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/90 font-medium hover:bg-primary-foreground/10 transition-colors duration-200 cursor-pointer"
+            >
+              <Download className="w-4 h-4" aria-hidden="true" />
+              {t("downloadCV")}
             </a>
           </div>
         </motion.div>
