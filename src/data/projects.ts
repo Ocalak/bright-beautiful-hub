@@ -29,7 +29,7 @@ export interface ProjectDetail {
   businessImpact: { en: string[]; de: string[] };
 }
 
-export const projects: ProjectDetail[] = [
+export const featuredProjects: ProjectDetail[] = [
   {
     slug: "gridops-energy-forecasting",
     titleKey: "energyTitle",
@@ -130,63 +130,6 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
-    slug: "load-forecasting",
-    titleKey: "proj1Title",
-    descKey: "proj1Desc",
-    tech: "Python, R, Neural Networks, SHAP, TensorFlow/Keras",
-    githubLink: "https://github.com/Ocalak/FeedForward-Neural-Network",
-    metrics: [
-      { value: "23%", label: { en: "RMSE Reduction", de: "RMSE-Reduktion" }, badge: "vs ARIMA" },
-      { value: "95%", label: { en: "Forecast Accuracy", de: "Prognosegenauigkeit" }, badge: "24h ahead" },
-      { value: "<50ms", label: { en: "Inference Time", de: "Inferenzzeit" }, badge: "Real-time" },
-      { value: "17.5K", label: { en: "Data Points Processed", de: "Verarbeitete Datenpunkte" } },
-      { value: "0.94", label: { en: "R² Score", de: "R²-Wert" } },
-      { value: "112 MW", label: { en: "MAE", de: "MAE" } },
-    ],
-    modelComparison: [
-      { name: "Neural Network", metrics: [{ label: "RMSE", value: "145 MW" }, { label: "R²", value: "0.94" }], isHighlighted: true },
-      { name: "ARIMA", metrics: [{ label: "RMSE", value: "188 MW" }, { label: "R²", value: "0.87" }] },
-      { name: "Linear Regression", metrics: [{ label: "RMSE", value: "210 MW" }, { label: "R²", value: "0.82" }] },
-    ],
-    featureImportance: [
-      { name: { en: "Temperature", de: "Temperatur" }, percentage: 42 },
-      { name: { en: "Hour of Day", de: "Tageszeit" }, percentage: 28 },
-      { name: { en: "Day of Week", de: "Wochentag" }, percentage: 18 },
-      { name: { en: "Humidity", de: "Luftfeuchtigkeit" }, percentage: 8 },
-      { name: { en: "Wind Speed", de: "Windgeschwindigkeit" }, percentage: 4 },
-    ],
-    technicalHighlights: {
-      en: [
-        "Developed feedforward neural network for short-term electricity load forecasting",
-        "Integrated multi-variate weather data (temperature, humidity, wind speed) as external features",
-        "Applied SHAP for model interpretability, revealing temperature as the dominant feature (42% contribution)",
-        "Implemented robust data preprocessing pipeline with outlier detection and normalization",
-        "Compared performance: NN (RMSE: 145 MW) vs ARIMA (RMSE: 188 MW) vs Linear Regression (RMSE: 210 MW)",
-        "Processed 2+ years of hourly load data (17,520 data points)",
-      ],
-      de: [
-        "Entwicklung eines Feedforward-Neuronalen Netzes zur kurzfristigen Lastprognose",
-        "Integration multivariater Wetterdaten (Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit) als externe Features",
-        "Anwendung von SHAP für Modellinterpretierbarkeit – Temperatur als dominanter Faktor (42% Beitrag)",
-        "Implementierung einer robusten Datenvorverarbeitungspipeline mit Ausreißererkennung und Normalisierung",
-        "Leistungsvergleich: NN (RMSE: 145 MW) vs ARIMA (RMSE: 188 MW) vs Lineare Regression (RMSE: 210 MW)",
-        "Verarbeitung von über 2 Jahren stündlicher Lastdaten (17.520 Datenpunkte)",
-      ],
-    },
-    businessImpact: {
-      en: [
-        "Enables grid operators to optimize generation scheduling",
-        "Reduces energy waste and improves grid stability",
-        "Supports real-time decision-making with sub-50ms inference",
-      ],
-      de: [
-        "Ermöglicht Netzbetreibern die Optimierung der Erzeugungsplanung",
-        "Reduziert Energieverschwendung und verbessert die Netzstabilität",
-        "Unterstützt Echtzeit-Entscheidungen mit unter 50ms Inferenzzeit",
-      ],
-    },
-  },
-  {
     slug: "rental-platform",
     titleKey: "proj2Title",
     descKey: "proj2Desc",
@@ -277,47 +220,6 @@ export const projects: ProjectDetail[] = [
     },
   },
   {
-    slug: "firstkebab-stripe",
-    titleKey: "firstkebabTitle",
-    descKey: "firstkebabDesc",
-    tech: "JavaScript, Stripe API, Webhooks, Email Automation",
-    githubLink: "https://firstkebab.vercel.app",
-    metrics: [
-      { value: "Real-Time", label: { en: "Payment Notifications", de: "Zahlungsbenachrichtigungen" }, badge: "Automated" },
-      { value: "Stripe", label: { en: "Payment Gateway", de: "Zahlungsanbieter" }, badge: "Integrated" },
-      { value: "Webhook", label: { en: "Event Handling", de: "Event-Handling" }, badge: "Live" },
-      { value: "0 Manual", label: { en: "Steps After Payment", de: "Manuelle Schritte" }, badge: "Full Auto" },
-    ],
-    technicalHighlights: {
-      en: [
-        "Integrated Stripe payment gateway into a restaurant website using vanilla JavaScript — full checkout flow and payment confirmation UX.",
-        "Built a Stripe webhook handler to automate email notifications on payment events (success, failure, refund).",
-        "Configured Stripe webhook signature verification to ensure secure, authenticated event processing.",
-        "Implemented end-to-end flow: customer pays → Stripe fires webhook → server processes event → confirmation email sent automatically.",
-        "Deployed with zero manual monitoring required — all payment events handled and logged automatically.",
-      ],
-      de: [
-        "Integration des Stripe-Zahlungs-Gateways in eine Restaurant-Website mit Vanilla JavaScript — vollständiger Checkout-Flow und Zahlungsbestätigungs-UX.",
-        "Aufbau eines Stripe-Webhook-Handlers zur automatischen E-Mail-Benachrichtigung bei Zahlungsereignissen (Erfolg, Fehler, Rückerstattung).",
-        "Konfiguration der Stripe-Webhook-Signaturverifizierung für eine sichere, authentifizierte Ereignisverarbeitung.",
-        "Implementierung des End-to-End-Flows: Kunde zahlt → Stripe feuert Webhook → Server verarbeitet Ereignis → Bestätigungs-E-Mail wird automatisch gesendet.",
-        "Deployment ohne manuelles Monitoring — alle Zahlungsereignisse werden automatisch verarbeitet und protokolliert.",
-      ],
-    },
-    businessImpact: {
-      en: [
-        "Eliminates manual payment tracking — owner is notified instantly on every transaction.",
-        "Reduces failed payment response time from hours to seconds via automated alerts.",
-        "Provides a scalable payment infrastructure ready for future online ordering features.",
-      ],
-      de: [
-        "Eliminiert manuelle Zahlungsverfolgung — Inhaber wird bei jeder Transaktion sofort benachrichtigt.",
-        "Reduziert die Reaktionszeit bei fehlgeschlagenen Zahlungen von Stunden auf Sekunden durch automatische Benachrichtigungen.",
-        "Bietet eine skalierbare Zahlungsinfrastruktur, bereit für zukünftige Online-Bestellfunktionen.",
-      ],
-    },
-  },
-  {
     slug: "trivium-seo-automation",
     titleKey: "triviumTitle",
     descKey: "triviumDesc",
@@ -356,6 +258,107 @@ export const projects: ProjectDetail[] = [
         "Automatisierte SEO-Content-Workflows reduzieren den manuellen Content-Aufwand um 70% durch Claude AI + Airtable-Pipelines.",
         "Hreflang- und Schema-Fixes haben beide Sprachversionen für die Google-Indexierung freigeschaltet.",
         "Lokale SEO-Strategie positioniert die Schule für den hochintentionalen Suchmarkt 'Integrationskurs Duisburg'.",
+      ],
+    },
+  },
+];
+
+export const sideProjects: ProjectDetail[] = [
+  {
+    slug: "load-forecasting",
+    titleKey: "proj1Title",
+    descKey: "proj1Desc",
+    tech: "Python, R, Neural Networks, SHAP, TensorFlow/Keras",
+    githubLink: "https://github.com/Ocalak/FeedForward-Neural-Network",
+    metrics: [
+      { value: "23%", label: { en: "RMSE Reduction", de: "RMSE-Reduktion" }, badge: "vs ARIMA" },
+      { value: "95%", label: { en: "Forecast Accuracy", de: "Prognosegenauigkeit" }, badge: "24h ahead" },
+      { value: "<50ms", label: { en: "Inference Time", de: "Inferenzzeit" }, badge: "Real-time" },
+      { value: "17.5K", label: { en: "Data Points Processed", de: "Verarbeitete Datenpunkte" } },
+      { value: "0.94", label: { en: "R² Score", de: "R²-Wert" } },
+      { value: "112 MW", label: { en: "MAE", de: "MAE" } },
+    ],
+    modelComparison: [
+      { name: "Neural Network", metrics: [{ label: "RMSE", value: "145 MW" }, { label: "R²", value: "0.94" }], isHighlighted: true },
+      { name: "ARIMA", metrics: [{ label: "RMSE", value: "188 MW" }, { label: "R²", value: "0.87" }] },
+      { name: "Linear Regression", metrics: [{ label: "RMSE", value: "210 MW" }, { label: "R²", value: "0.82" }] },
+    ],
+    featureImportance: [
+      { name: { en: "Temperature", de: "Temperatur" }, percentage: 42 },
+      { name: { en: "Hour of Day", de: "Tageszeit" }, percentage: 28 },
+      { name: { en: "Day of Week", de: "Wochentag" }, percentage: 18 },
+      { name: { en: "Humidity", de: "Luftfeuchtigkeit" }, percentage: 8 },
+      { name: { en: "Wind Speed", de: "Windgeschwindigkeit" }, percentage: 4 },
+    ],
+    technicalHighlights: {
+      en: [
+        "Developed feedforward neural network for short-term electricity load forecasting",
+        "Integrated multi-variate weather data (temperature, humidity, wind speed) as external features",
+        "Applied SHAP for model interpretability, revealing temperature as the dominant feature (42% contribution)",
+        "Implemented robust data preprocessing pipeline with outlier detection and normalization",
+        "Compared performance: NN (RMSE: 145 MW) vs ARIMA (RMSE: 188 MW) vs Linear Regression (RMSE: 210 MW)",
+        "Processed 2+ years of hourly load data (17,520 data points)",
+      ],
+      de: [
+        "Entwicklung eines Feedforward-Neuronalen Netzes zur kurzfristigen Lastprognose",
+        "Integration multivariater Wetterdaten (Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit) als externe Features",
+        "Anwendung von SHAP für Modellinterpretierbarkeit – Temperatur als dominanter Faktor (42% Beitrag)",
+        "Implementierung einer robusten Datenvorverarbeitungspipeline mit Ausreißererkennung und Normalisierung",
+        "Leistungsvergleich: NN (RMSE: 145 MW) vs ARIMA (RMSE: 188 MW) vs Lineare Regression (RMSE: 210 MW)",
+        "Verarbeitung von über 2 Jahren stündlicher Lastdaten (17.520 Datenpunkte)",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Enables grid operators to optimize generation scheduling",
+        "Reduces energy waste and improves grid stability",
+        "Supports real-time decision-making with sub-50ms inference",
+      ],
+      de: [
+        "Ermöglicht Netzbetreibern die Optimierung der Erzeugungsplanung",
+        "Reduziert Energieverschwendung und verbessert die Netzstabilität",
+        "Unterstützt Echtzeit-Entscheidungen mit unter 50ms Inferenzzeit",
+      ],
+    },
+  },
+  {
+    slug: "firstkebab-stripe",
+    titleKey: "firstkebabTitle",
+    descKey: "firstkebabDesc",
+    tech: "JavaScript, Stripe API, Webhooks, Email Automation",
+    githubLink: "https://firstkebab.vercel.app",
+    metrics: [
+      { value: "Real-Time", label: { en: "Payment Notifications", de: "Zahlungsbenachrichtigungen" }, badge: "Automated" },
+      { value: "Stripe", label: { en: "Payment Gateway", de: "Zahlungsanbieter" }, badge: "Integrated" },
+      { value: "Webhook", label: { en: "Event Handling", de: "Event-Handling" }, badge: "Live" },
+      { value: "0 Manual", label: { en: "Steps After Payment", de: "Manuelle Schritte" }, badge: "Full Auto" },
+    ],
+    technicalHighlights: {
+      en: [
+        "Integrated Stripe payment gateway into a restaurant website using vanilla JavaScript — full checkout flow and payment confirmation UX.",
+        "Built a Stripe webhook handler to automate email notifications on payment events (success, failure, refund).",
+        "Configured Stripe webhook signature verification to ensure secure, authenticated event processing.",
+        "Implemented end-to-end flow: customer pays → Stripe fires webhook → server processes event → confirmation email sent automatically.",
+        "Deployed with zero manual monitoring required — all payment events handled and logged automatically.",
+      ],
+      de: [
+        "Integration des Stripe-Zahlungs-Gateways in eine Restaurant-Website mit Vanilla JavaScript — vollständiger Checkout-Flow und Zahlungsbestätigungs-UX.",
+        "Aufbau eines Stripe-Webhook-Handlers zur automatischen E-Mail-Benachrichtigung bei Zahlungsereignissen (Erfolg, Fehler, Rückerstattung).",
+        "Konfiguration der Stripe-Webhook-Signaturverifizierung für eine sichere, authentifizierte Ereignisverarbeitung.",
+        "Implementierung des End-to-End-Flows: Kunde zahlt → Stripe feuert Webhook → Server verarbeitet Ereignis → Bestätigungs-E-Mail wird automatisch gesendet.",
+        "Deployment ohne manuelles Monitoring — alle Zahlungsereignisse werden automatisch verarbeitet und protokolliert.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Eliminates manual payment tracking — owner is notified instantly on every transaction.",
+        "Reduces failed payment response time from hours to seconds via automated alerts.",
+        "Provides a scalable payment infrastructure ready for future online ordering features.",
+      ],
+      de: [
+        "Eliminiert manuelle Zahlungsverfolgung — Inhaber wird bei jeder Transaktion sofort benachrichtigt.",
+        "Reduziert die Reaktionszeit bei fehlgeschlagenen Zahlungen von Stunden auf Sekunden durch automatische Benachrichtigungen.",
+        "Bietet eine skalierbare Zahlungsinfrastruktur, bereit für zukünftige Online-Bestellfunktionen.",
       ],
     },
   },

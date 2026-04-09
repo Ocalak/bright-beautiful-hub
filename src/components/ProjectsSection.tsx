@@ -2,7 +2,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { projects } from "@/data/projects";
+import { featuredProjects } from "@/data/projects";
 
 const ProjectsSection = () => {
   const { t } = useLanguage();
@@ -21,7 +21,7 @@ const ProjectsSection = () => {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project, i) => (
+          {featuredProjects.map((project, i) => (
             <motion.div
               key={project.slug}
               className="group bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover border border-border/50 transition-all duration-300 hover:-translate-y-1"
@@ -62,6 +62,22 @@ const ProjectsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="text-center mt-10"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+        >
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors border border-border/50 rounded-full px-5 py-2 hover:border-primary/50"
+          >
+            {t("seeAllProjects")}
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

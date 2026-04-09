@@ -2,7 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { ArrowLeft, Github, TrendingUp, BarChart3, Cpu, Target, Lightbulb, CheckCircle2 } from "lucide-react";
-import { projects } from "@/data/projects";
+import { featuredProjects, sideProjects } from "@/data/projects";
+const projects = [...featuredProjects, ...sideProjects];
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
