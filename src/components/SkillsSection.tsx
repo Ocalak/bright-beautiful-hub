@@ -17,6 +17,11 @@ const SkillsSection = () => {
       skills: ["Econometrics", "Statistical Modeling", "Hypothesis Testing", "Monte Carlo Simulation", "Data Visualization"],
     },
     {
+      titleKey: "skillAutomation" as const,
+      icon: Wrench,
+      skills: ["Claude AI", "n8n", "Airtable", "Napier AI"],
+    },
+    {
       titleKey: "skillTools" as const,
       icon: Wrench,
       skills: ["Python, R, SQL", "FastAPI, React", "Git, Docker", "AWS"],
