@@ -85,7 +85,7 @@ const HeroSection = () => {
             </a>
             <a
               href="/cv.pdf"
-              download
+              download="Ocal_Kaptan_CV.pdf"
               aria-label="Download CV as PDF"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary-foreground/20 text-primary-foreground/90 font-medium hover:bg-primary-foreground/10 transition-colors duration-200 cursor-pointer"
             >
