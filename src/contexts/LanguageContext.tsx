@@ -35,6 +35,8 @@ const translations = {
     firstkebabDesc: "Integrated Stripe payments and automated webhook-driven email notifications for a restaurant website using vanilla JavaScript.",
     triviumTitle: "Sprachschule — AI SEO Automation",
     triviumDesc: "Built an LLM-powered SEO content workflow with Claude AI + Airtable, implemented hreflang for a bilingual site, and delivered a full technical SEO strategy.",
+    aiWorkflowsTitle: "AI Automation Workflows — Claude + Airtable + n8n",
+    aiWorkflowsDesc: "Production-style n8n workflows orchestrating Claude API and Airtable for scalable SEO content generation and support ticket triage.",
     viewOnGithub: "View on GitHub →",
     visitWebsite: "Visit Website →",
     viewDetails: "View Details →",
