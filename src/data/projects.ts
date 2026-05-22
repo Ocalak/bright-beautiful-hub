@@ -263,6 +263,50 @@ export const featuredProjects: ProjectDetail[] = [
       ],
     },
   },
+  {
+    slug: "ai-automation-workflows",
+    titleKey: "aiWorkflowsTitle",
+    descKey: "aiWorkflowsDesc",
+    tech: "n8n, Claude API (Haiku), Airtable, Webhooks, JavaScript",
+    githubLink: "https://github.com/Ocalak/ai-automation-workflows",
+    metrics: [
+      { value: "4", label: { en: "Production Workflows", de: "Produktive Workflows" }, badge: "n8n" },
+      { value: "Claude Haiku", label: { en: "LLM", de: "LLM" }, badge: "Cost-Optimized" },
+      { value: "Airtable", label: { en: "Source of Truth", de: "Datenbasis" }, badge: "Data Layer" },
+      { value: "Scheduled", label: { en: "Batch Processing", de: "Batch-Verarbeitung" }, badge: "Daily" },
+      { value: "Human-in-Loop", label: { en: "Safety Model", de: "Sicherheitsmodell" }, badge: "Status-Gated" },
+    ],
+    technicalHighlights: {
+      en: [
+        "Designed an end-to-end SEO content pipeline orchestrating Claude API, Airtable, and n8n for a German e-commerce beauty retailer use case.",
+        "Built a scheduled batch processor that queries Airtable for empty-status records and fans them out to a webhook-driven generator with rate-limit-aware delays.",
+        "Implemented a generator workflow that builds structured Claude prompts and writes back 5 SEO fields (title, meta description, description, keywords, social caption) per product.",
+        "Hardened JSON parsing by stripping Claude's markdown code fences before parse — eliminating silent formatting failures.",
+        "Added a customer service ticket classifier that categorizes incoming messages, assigns priority, drafts a reply, and flags human escalation.",
+        "Enforced human-in-the-loop safety: batch jobs only touch records with empty Status so manually edited content is never overwritten.",
+      ],
+      de: [
+        "Entwurf einer End-to-End-SEO-Content-Pipeline mit Orchestrierung von Claude API, Airtable und n8n für einen deutschen E-Commerce-Beauty-Anwendungsfall.",
+        "Aufbau eines geplanten Batch-Prozessors, der Airtable nach Datensätzen mit leerem Status abfragt und an einen Webhook-gesteuerten Generator verteilt — mit Rate-Limit-Pufferung.",
+        "Implementierung eines Generator-Workflows, der strukturierte Claude-Prompts erstellt und 5 SEO-Felder pro Produkt zurückschreibt (Titel, Meta-Description, Beschreibung, Keywords, Social-Caption).",
+        "Robuste JSON-Verarbeitung durch Entfernen von Claude-Markdown-Codefences vor dem Parsen — verhindert stille Fehler.",
+        "Kundenservice-Ticket-Klassifikator, der Nachrichten kategorisiert, priorisiert, eine Antwort entwirft und Eskalation an Menschen markiert.",
+        "Human-in-the-Loop-Sicherheit: Batch-Jobs betreffen ausschließlich Datensätze mit leerem Status — manuell bearbeitete Inhalte werden nie überschrieben.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Scales SEO content generation across tens of thousands of products without proportional manual effort.",
+        "Reduces support response time via automated triage and AI-drafted replies, while keeping humans in control of escalations.",
+        "Uses Claude Haiku to keep per-record cost low — making high-volume structured-output automation economically viable.",
+      ],
+      de: [
+        "Skaliert die SEO-Content-Erstellung über Zehntausende Produkte hinweg ohne proportionalen manuellen Aufwand.",
+        "Reduziert Support-Reaktionszeiten durch automatische Triage und KI-vorbereitete Antworten — bei voller menschlicher Kontrolle über Eskalationen.",
+        "Nutzung von Claude Haiku zur Senkung der Kosten pro Datensatz — ermöglicht wirtschaftlich tragfähige strukturierte Automatisierung in großem Maßstab.",
+      ],
+    },
+  },
 ];
 
 export const sideProjects: ProjectDetail[] = [
