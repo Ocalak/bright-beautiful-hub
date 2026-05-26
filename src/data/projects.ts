@@ -264,6 +264,51 @@ export const featuredProjects: ProjectDetail[] = [
     },
   },
   {
+    slug: "voice-ai-intake-agent",
+    titleKey: "voiceAgentTitle",
+    descKey: "voiceAgentDesc",
+    tech: "Python, FastAPI, Whisper (faster-whisper), Ollama, edge-tts, SQLite, Vanilla JS",
+    githubLink: "https://github.com/Ocalak/Voice-AI-Intake-Agent",
+    metrics: [
+      { value: "100% Local", label: { en: "Processing", de: "Verarbeitung" }, badge: "No Cloud APIs" },
+      { value: "Whisper", label: { en: "STT Engine", de: "STT-Engine" }, badge: "faster-whisper" },
+      { value: "Ollama", label: { en: "LLM Backend", de: "LLM-Backend" }, badge: "qwen2.5:7b" },
+      { value: "edge-tts", label: { en: "TTS Engine", de: "TTS-Engine" }, badge: "Neural German" },
+      { value: "<2s", label: { en: "Avg Turn Latency", de: "Ø Antwortlatenz" }, badge: "Real-time" },
+      { value: "GDPR", label: { en: "Compliance", de: "Konformität" }, badge: "DSGVO ✓" },
+    ],
+    technicalHighlights: {
+      en: [
+        "Built a full local voice interview pipeline: browser mic → MediaRecorder → FastAPI → faster-whisper STT → Ollama LLM → edge-tts → audio playback.",
+        "Implemented streaming WebSocket-style TTS delivery so the patient hears the AI speak in near-real-time without full-response wait.",
+        "Designed a configurable agent system via JSON files supporting multiple interview domains: medical intake, HR screening, customer support.",
+        "Persisted every session transcript to SQLite with timestamps; doctor-facing dashboard renders full conversation history with flag summaries.",
+        "Replaced browser SpeechSynthesis with a server-side edge-tts endpoint for high-quality, consistent German neural voice output.",
+        "All STT, LLM, and TTS processing runs on-device — zero patient data sent to external APIs, meeting GDPR/DSGVO requirements.",
+      ],
+      de: [
+        "Aufbau einer vollständig lokalen Sprachinterview-Pipeline: Browser-Mikrofon → MediaRecorder → FastAPI → faster-whisper STT → Ollama LLM → edge-tts → Audio-Wiedergabe.",
+        "Implementierung von Streaming-TTS, sodass der Patient die KI nahezu in Echtzeit hört, ohne auf die vollständige Antwort warten zu müssen.",
+        "Konfigurierbares Agentensystem via JSON-Dateien für verschiedene Interview-Domänen: medizinisches Intake, HR-Screening, Kundensupport.",
+        "Speicherung aller Sitzungstranskripte in SQLite mit Zeitstempeln; arztgerichtetes Dashboard zeigt vollständigen Gesprächsverlauf mit Flag-Zusammenfassungen.",
+        "Browser-SpeechSynthesis durch server-seitigen edge-tts-Endpunkt ersetzt — qualitativ hochwertige, konsistente deutsche Neuralstimme.",
+        "STT, LLM und TTS laufen vollständig lokal — keine Patientendaten werden an externe APIs gesendet, DSGVO-konform.",
+      ],
+    },
+    businessImpact: {
+      en: [
+        "Eliminates patient wait time for intake paperwork — the AI conducts the interview autonomously before the appointment.",
+        "Doctors receive a structured, flagged transcript instead of handwritten notes, reducing documentation effort.",
+        "Fully local architecture makes it deployable in clinics with strict data residency requirements without any cloud subscription costs.",
+      ],
+      de: [
+        "Eliminiert Wartezeiten für Patientenfragebögen — die KI führt das Interview eigenständig vor dem Termin durch.",
+        "Ärzte erhalten ein strukturiertes, markiertes Transkript statt handschriftlicher Notizen — weniger Dokumentationsaufwand.",
+        "Vollständig lokale Architektur ermöglicht den Einsatz in Kliniken mit strengen Datenschutzanforderungen ohne Cloud-Abonnementkosten.",
+      ],
+    },
+  },
+  {
     slug: "ai-automation-workflows",
     titleKey: "aiWorkflowsTitle",
     descKey: "aiWorkflowsDesc",
